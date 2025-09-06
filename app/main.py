@@ -22,7 +22,6 @@ class Animal:
         if self in Animal.alive:
             Animal.alive.remove(self)
 
-    @property
     def convert_to_dict(self) -> dict:
         return {
             "Name": self.name,
@@ -31,14 +30,11 @@ class Animal:
         }
 
     def __repr__(self) -> str:
-        result = []
-        dict_result = self.convert_to_dict
-        result.append(
-            f'{{Name: {dict_result["Name"]}, '
-            f'Health: {dict_result["Health"]}, '
-            f'Hidden: {dict_result["Hidden"]}}}'
+        return (
+            f"\u007bName: {self.name}, "
+            f"Health: {self.health}, "
+            f"Hidden: {self.hidden}\u007d"
         )
-        return f"{",".join(result)}"
 
 
 class Herbivore(Animal):
