@@ -34,9 +34,9 @@ class Animal:
         result = []
         dict_result = self.convert_to_dict
         result.append(
-            f"{{Name: {dict_result["Name"]}, "
-            f"Health: {dict_result["Health"]}, "
-            f"Hidden: {dict_result["Hidden"]}}}"
+            f'{{Name: {dict_result["Name"]}, '
+            f'Health: {dict_result["Health"]}, '
+            f'Hidden: {dict_result["Hidden"]}}}'
         )
         return f"{",".join(result)}"
 
